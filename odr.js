@@ -140,12 +140,12 @@ window.addEventListener('load', function () {
         arg.Inputs.input1.Values.push(p);
 
         jQuery.ajax({
-            //url: "https://welyapim.azure-api.net/predict/score",
-            url: "https://ussouthcentral.services.azureml.net/workspaces/f791576d87ef41419b2cbea3d1d1bcb4/services/f5aabb22b2c541f6a7b849b16d750c27/execute?api-version=2.0&details=true",
+            url: "https://welyapim.azure-api.net/predict/score",
+            //url: "https://ussouthcentral.services.azureml.net/workspaces/f791576d87ef41419b2cbea3d1d1bcb4/services/f5aabb22b2c541f6a7b849b16d750c27/execute?api-version=2.0&details=true",
             beforeSend: function (xhrObj) {
                 xhrObj.setRequestHeader("Content-Type", "application/json");
-                xhrObj.setRequestHeader("Authorization","Bearer mrb7pFmoh9sQQ1sV3F8HAp6ikNNE2mijpkNWQPahDwkpKFuEar+elQsWvfMrCO+L01pL9JqScj+SeBQNg00PEw==");
-                //xhrObj.setRequestHeader("Ocp-Apim-Subscription-Key", "84191a0d2ad047d5a17fe9f981593a7a");
+                //xhrObj.setRequestHeader("Authorization","Bearer mrb7pFmoh9sQQ1sV3F8HAp6ikNNE2mijpkNWQPahDwkpKFuEar+elQsWvfMrCO+L01pL9JqScj+SeBQNg00PEw==");
+                xhrObj.setRequestHeader("Ocp-Apim-Subscription-Key", "84191a0d2ad047d5a17fe9f981593a7a");
             },
             type: "POST",
             data: JSON.stringify(arg)

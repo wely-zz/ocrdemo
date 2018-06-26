@@ -143,6 +143,7 @@ window.addEventListener('load', function () {
             url: "https://welyapim.azure-api.net/predict/score",
             beforeSend: function (xhrObj) {
                 xhrObj.setRequestHeader("Content-Type", "application/json");
+                xhrObj.setRequestHeader("Ocp-Apim-Subscription-Key", "84191a0d2ad047d5a17fe9f981593a7a");
             },
             type: "POST",
             data: JSON.stringify(arg)
